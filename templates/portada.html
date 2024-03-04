@@ -1,0 +1,27 @@
+<html>
+  <title>FLASK</title>
+  <body>
+    <div>
+      <a href= "{{ url_for('c1') }}">Home</a><br/><br/>
+      <a href= "{{ url_for('c2') }}">End</a><br/><br/>
+    </div>
+    <h1>flask</h1>
+    <img src="../static/img.png" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+    <br/>{{valores.brand}}
+    <br/>{{valores.model}}
+    <br/>{{valores.year}}
+    <br/>
+    {% for elemento in lista %}
+      <br/>{{elemento}}
+    {% endfor %}
+    {% if  valores.cierto %}
+      <br/><p>OK</p>
+    {% else %}
+      <br/><p>KO</p>
+    {% endif %}
+    {% block contenido %}
+    {% endblock %}
+    <br/>
+    <h5>FIN</h5>
+  </body>
+</html>

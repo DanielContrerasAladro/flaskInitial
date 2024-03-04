@@ -1,0 +1,11 @@
+{% if enviado %}
+  <p>Enviado {{nombre}}</p>
+{% else %}
+  <p>Rellena</p>
+{% endif %}
+
+<form method="POST">
+  {{ formulario.hidden_tag() }}
+  {{ formulario.nombre.label(class='control-label') }} {{formulario.nombre}}
+  {{ formulario.enviar }}
+</form>
